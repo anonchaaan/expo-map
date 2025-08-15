@@ -1,0 +1,76 @@
+/* 全体の基本設定 */
+body {
+  font-family: sans-serif;
+  padding: 20px;
+  background-color: #f5f5f5;
+  margin: 0;
+}
+
+/* 見出しスタイル */
+h1 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+/* 地図のコンテナ（スクロール可能） */
+#map-container {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: visible;  /* ← 修正！ */
+  -webkit-overflow-scrolling: touch;  /* iPhoneでスムーズにスクロール */
+  border: 1px solid #ccc;
+}
+
+/* 地図画像（縮小対応） */
+#map-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ポップアップ表示 */
+#popup {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  border: 2px solid black;
+  padding: 20px;
+  z-index: 9999;
+  display: none;
+
+  width: clamp(300px, 40vw, 500px); /* ← 自動フィット */
+  max-height: 80vh;
+  overflow-y: auto;
+
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+
+/* ポップアップ内の画像 */
+#popup img {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+/* 閉じるボタン */
+#close-btn {
+  float: right;
+  cursor: pointer;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* 非表示用クラス */
+.hidden {
+  display: none;
+}

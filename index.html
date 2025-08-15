@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>万博パビリオンマップ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>EXPO 2025 パビリオンマップ</h1>
+
+  <div id="map-container">
+    <img src="map.jpg" usemap="#pavilionmap" alt="万博マップ">
+
+    <map name="pavilionmap">
+      <area shape="rect" coords="3304,1810,3532,1966" alt="日本館" data-pavilion="japan">
+      <area shape="rect" coords="2699,1546,2836,1584" alt="アメリカ館" data-pavilion="usa">
+      <area shape="rect" coords="2588,1019,2681,1050" alt="ドイツ館" data-pavilion="germany">
+      <area shape="rect" coords="1867,903,1983,987" alt="サウジアラビア館" data-pavilion="saudi">
+    </map>
+  </div>
+
+  <div id="popup" class="hidden">
+    <span id="close-btn">×</span>
+    <h2 id="popup-title">パビリオン名</h2>
+    <img id="popup-img" src="" alt="パビリオンの画像" width="300">
+    <p id="popup-desc">説明文がここに出ます。</p>
+  </div>
+
+  <!-- スクリプト読み込み -->
+  <script src="script.js"></script>
+
+  <!-- image-map-resizer ライブラリ -->
+  <script src="https://cdn.jsdelivr.net/npm/image-map-resizer@1.0.10/js/imageMapResizer.min.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      imageMapResize();
+    });
+  </script>
+</body>
+</html>
