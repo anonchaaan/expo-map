@@ -172,6 +172,11 @@ const data = {
     img: "poland.jpg",
     desc: "目立つ展示はないけど整っていて綺麗、シアターでゆっくりできるよ、お土産の琥珀もかわいいよ"
   },
+ angola: {
+  title: "アンゴラ館",
+  img: "angola,jpg",
+  desc: "まあまあ並びます、でも展示映像見るだけ、カフェのエッグタルト美味しかったよ"
+},
   serbia: {
     title: "セルビア館",
     img: "serbia.jpg",
